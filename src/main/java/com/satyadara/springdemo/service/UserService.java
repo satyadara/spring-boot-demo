@@ -1,15 +1,18 @@
-package com.satyadara.service;
+package com.satyadara.springdemo.service;
 
-import com.satyadara.model.User;
-import com.satyadara.repository.UserRepository;
+import com.satyadara.springdemo.model.User;
+import com.satyadara.springdemo.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class UserService {
+
     private UserRepository userRepository;
 
+    @Autowired
     public UserService(UserRepository userRepository)    {
         this.userRepository = userRepository;
     }
@@ -23,7 +26,7 @@ public class UserService {
 
     public User getAUser(Long id)    {
 
-        User user = userRepository.findById(id);
+        User user = userRepository.findOne(id);
 
         return user;
     }

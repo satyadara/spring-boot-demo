@@ -1,8 +1,7 @@
-package com.satyadara.model;
-
-import org.springframework.data.annotation.Id;
+package com.satyadara.springdemo.model;
 
 import javax.persistence.*;
+
 
 @Entity
 @Table(name = "users")
@@ -11,26 +10,28 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_user")
-    private long id;
+    private Long id;
+
     @Column(name = "name")
     private String name;
+
     @Column(name = "age")
     private String age;
 
 
     public User(){}
-    public User(long id, String name, String age)   {
+    public User(Long id, String name, String age)   {
         this.setId(id);
         this.setName(name);
         this.setAge(age);
     }
 
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
