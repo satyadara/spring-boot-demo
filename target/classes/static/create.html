@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8"/>
+    <title>Membuat Pengguna</title>
+</head>
+<body>
+    <form th:object="${user}" th:action="@{/post}" th:method="POST">
+        <table>
+            <tr>
+                <td>Nama</td>
+                <td>
+                    <input th:type="text" th:field="*{name}">
+                </td>
+            </tr>
+            <tr>
+                <td>Umur</td>
+                <td>
+                    <input th:type="text" th:field="*{age}">
+                </td>
+            </tr>
+        </table>
+        <button th:type="submit">Submit</button>
+    <form/>
+</body>
+</html>
