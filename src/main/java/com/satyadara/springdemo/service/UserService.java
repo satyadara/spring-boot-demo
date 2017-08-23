@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
-public class UserService {
+@Service    //Menandakan kelas ini merupakan service.
+public class UserService {  //Tempat implementasi repository.
 
     private UserRepository userRepository;
 
@@ -34,5 +34,9 @@ public class UserService {
     public User postAUser(User user)    {
         User user1 = userRepository.save(user);
         return user1;
+    }
+
+    public void deleteAUser(Long id)    {
+        userRepository.delete(id);
     }
 }

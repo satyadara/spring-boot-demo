@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
+@Controller //Menandakan kelas ini adalah Controller (Berbeda dengan RestController)
 public class UserController {
 
 
-    UserService userService;
+    UserService userService;    //Menggunakan service, karena repository di implementasikan di UserService
 
     @Autowired
-    public UserController(UserService userService) {
-        this.userService = userService;
+    public UserController(UserService userService) {    //Cara menggunakan Autowired yang aman
+        this.userService = userService;                 //dan tanpa warning
     }
 
     @RequestMapping(value = "/", method = RequestMethod.GET)    //INDEX & List User
@@ -25,14 +25,14 @@ public class UserController {
         List<User> userList = userService.getUserList();
         model.addAttribute("messages", "Tampil Semua Pengguna.");
         model.addAttribute("users", userList);
-        return "index";
+        return "index"; //index.html
     }
 
     @GetMapping(value = "/create")      //Masuk ke halaman buat
     public String gotoCreate(Model model)   {
         model.addAttribute("messages", "Membuat Pengguna.");
         model.addAttribute("user", new User());
-        return "create";
+        return "create"; //create.html
     }
 
 
@@ -41,16 +41,21 @@ public class UserController {
         User user = userService.getAUser(id);
         model.addAttribute("messages", "Sunting Pengguna.");
         model.addAttribute("user", user);
-        return "create";
+        return "create"; //create.html
     }
 
-    @RequestMapping(value = "/post", method = RequestMethod.POST)   //Melakukan post User
+    @RequestMapping(value = "/post", method = RequestMethod.POST)   //Melakukan post
     public String postAUser(Model model, User x) {
         User user1 = userService.postAUser(x);
         model.addAttribute("messages", "Menyimpan Pengguna.");
         model.addAttribute("user", user1);
-        return "redirect:/";
+        return "redirect:/"; //redirect ke Mapping "/"
     }
 
-
+    @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET) //Melakukan hapus pengguna, masih sedikit
+    public String deleteAUser(Model model, @PathVariable Long id)   {   //aneh karena menggunakan method GET.
+        userService.deleteAUser(id);
+        model.addAttribute("messages", "Hapus Pengguna.");
+        return "redirect:/"; //redirect ke Mapping "/"
+    }
 }

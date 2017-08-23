@@ -6,16 +6,23 @@
 </head>
 <body>
     <div>
+        <a th:href="@{/create}">Tambah</a>
         <table>
             <tr>
                 <th>ID</th>
                 <th>Nama</th>
                 <th>Umur</th>
+                <th>Opsi</th>
             </tr>
             <tr th:each="user : ${users}">
                 <td th:text="${user.id}"></td>
                 <td th:text="${user.name}"></td>
                 <td th:text="${user.age}"></td>
+                <td>
+                    <a th:href="${'/user/' + user.id}">Sunting</a>
+                    /
+                    <a th:href="${'/delete/' + user.id}">Hapus</a>
+                </td>
             </tr>
 
         </table>

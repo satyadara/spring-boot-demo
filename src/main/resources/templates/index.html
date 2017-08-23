@@ -6,6 +6,7 @@
 </head>
 <body>
     <div>
+        <a th:href="@{/create}">Tambah</a>
         <table>
             <tr>
                 <th>ID</th>
@@ -18,9 +19,9 @@
                 <td th:text="${user.name}"></td>
                 <td th:text="${user.age}"></td>
                 <td>
-                    <a th:href="${'/edit/' + user.id}">Sunting</a>
+                    <a th:href="${'/user/' + user.id}">Sunting</a>
                     /
-                    <a>Hapus</a>
+                    <a th:href="${'/delete/' + user.id}">Hapus</a>
                 </td>
             </tr>
 
