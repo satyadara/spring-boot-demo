@@ -1,6 +1,6 @@
-package com.satyadara.repository;
+package com.satyadara.springdemo.repository;
 
-import com.satyadara.model.User;
+import com.satyadara.springdemo.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
