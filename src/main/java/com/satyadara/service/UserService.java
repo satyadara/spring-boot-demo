@@ -21,11 +21,15 @@ public class UserService {
         return userList;
     }
 
-    public User getUser(Long id)    {
+    public User getAUser(Long id)    {
 
         User user = userRepository.findById(id);
 
         return user;
     }
 
+    public User postAUser(User user)    {
+        User user1 = userRepository.save(user);
+        return user1;
+    }
 }
