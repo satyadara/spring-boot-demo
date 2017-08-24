@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0456f1c-4fc7-45b8-b24c-a3be03cea048" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/satyadara/springdemo/repository/PostgreSQLJDBC.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/2fc6da78-694e-44e9-b123-2c8d99049c39.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/2fc6da78-694e-44e9-b123-2c8d99049c39.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -116,6 +113,12 @@
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
+    </option>
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
     </option>
   </component>
   <component name="GradleLocalSettings">
@@ -399,12 +402,20 @@
       <workItem from="1503485897816" duration="1509000" />
       <workItem from="1503499122500" duration="5165000" />
       <workItem from="1503505209573" duration="4016000" />
-      <workItem from="1503531906009" duration="4770000" />
+      <workItem from="1503531906009" duration="4980000" />
     </task>
+    <task id="LOCAL-00001" summary="sudah dibuat kelas PostgreSQLJDBC yang digunakan untuk membuat Java Database Connectivity manual. Yang dibuat baru Fetch, Get, Insert.">
+      <created>1503537342291</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1503537342291</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24833000" />
+    <option name="totallyTimeSpent" value="25043000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
@@ -447,6 +458,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="sudah dibuat kelas PostgreSQLJDBC yang digunakan untuk membuat Java Database Connectivity manual. Yang dibuat baru Fetch, Get, Insert." />
+    <option name="LAST_COMMIT_MESSAGE" value="sudah dibuat kelas PostgreSQLJDBC yang digunakan untuk membuat Java Database Connectivity manual. Yang dibuat baru Fetch, Get, Insert." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
